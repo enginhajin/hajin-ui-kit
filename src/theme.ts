@@ -215,12 +215,21 @@ const shadow = {
   },
 };
 
+const radius = {
+  xs: '0.25rem',
+  sm: '0.5rem',
+  md: '0.625rem',
+  lg: '0.75rem',
+  xl: '0.825rem',
+};
+
 const theme: Theme = {
   color,
   palette,
   text,
   shadow,
   mq,
+  radius,
 };
 
 export default theme;

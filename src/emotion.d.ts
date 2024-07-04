@@ -213,6 +213,13 @@ declare module '@emotion/react' {
         xl2: string;
       };
     };
+    radius: {
+      xs: string;
+      sm: string;
+      md: string;
+      lg: string;
+      xl: string;
+    };
     mq: typeof mq;
   }
 }
