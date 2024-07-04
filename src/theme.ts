@@ -216,6 +216,7 @@ const shadow = {
 };
 
 const theme: Theme = {
+  color,
   palette,
   text,
   shadow,

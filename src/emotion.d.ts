@@ -3,8 +3,79 @@ import { mq } from './media-query';
 
 declare module '@emotion/react' {
   export type Palette = 'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
-  export type ButtonSize = 'xs' | 'sm' | 'md' | 'lg';
   export interface Theme {
+    color: {
+      basic: {
+        black: string;
+        white: string;
+      };
+      zinc: {
+        50: string;
+        100: string;
+        200: string;
+        300: string;
+        400: string;
+        500: string;
+        600: string;
+        700: string;
+        800: string;
+      };
+      blue: {
+        50: string;
+        100: string;
+        200: string;
+        300: string;
+        400: string;
+        500: string;
+        600: string;
+        700: string;
+        800: string;
+      };
+      purple: {
+        50: string;
+        100: string;
+        200: string;
+        300: string;
+        400: string;
+        500: string;
+        600: string;
+        700: string;
+        800: string;
+      };
+      green: {
+        50: string;
+        100: string;
+        200: string;
+        300: string;
+        400: string;
+        500: string;
+        600: string;
+        700: string;
+        800: string;
+      };
+      yellow: {
+        50: string;
+        100: string;
+        200: string;
+        300: string;
+        400: string;
+        500: string;
+        600: string;
+        700: string;
+        800: string;
+      };
+      red: {
+        50: string;
+        100: string;
+        200: string;
+        300: string;
+        400: string;
+        500: string;
+        600: string;
+        700: string;
+        800: string;
+      };
+    };
     palette: {
       layout: {
         background: string;
