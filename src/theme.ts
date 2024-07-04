@@ -159,7 +159,7 @@ const palette = {
 const text = {
   size: {
     xs: '0.75rem',
-    sm: '0.825rem',
+    sm: '0.875rem',
     md: '1rem',
     lg: '1.125rem',
     xl: '1.25rem',
@@ -220,7 +220,7 @@ const radius = {
   sm: '0.5rem',
   md: '0.625rem',
   lg: '0.75rem',
-  xl: '0.825rem',
+  xl: '0.875rem',
 };
 
 const theme: Theme = {
