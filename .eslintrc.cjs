@@ -24,5 +24,6 @@ module.exports = {
         printWidth: 100,
       },
     ],
+    'react/jsx-props-no-spreading': 'off',
   },
 };
