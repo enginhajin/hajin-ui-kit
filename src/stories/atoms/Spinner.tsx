@@ -3,7 +3,7 @@ import { css, Interpolation, keyframes, Palette, Theme, useTheme } from '@emotio
 export type SpinnerSize = 'sm' | 'md' | 'lg';
 export interface SpinnerProps {
   size: SpinnerSize;
-  palette?: Palette | 'current';
+  palette: Palette | 'current';
   css?: Interpolation<Theme>;
 }
 
