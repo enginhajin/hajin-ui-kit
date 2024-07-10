@@ -98,7 +98,7 @@ export const Button = ({
       '&:hover': { opacity: '0.8' },
     }),
     shadow: css({
-      boxShadow: `${theme.shadow[palette].lg}`,
+      boxShadow: `${theme.shadow[palette].md}`,
       '&:hover': { opacity: '0.8' },
     }),
     outline: css({
@@ -176,6 +176,7 @@ export const Button = ({
       {isLoading && (
         <Spinner
           size={size === 'lg' || size === 'xl' ? 'md' : 'sm'}
+          palette="current"
           css={{ marginRight: '0.5rem' }}
         />
       )}
