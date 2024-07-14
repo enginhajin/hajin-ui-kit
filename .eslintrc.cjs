@@ -15,15 +15,12 @@ module.exports = {
   plugins: ['react-refresh'],
   rules: {
     'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+    'react/jsx-props-no-spreading': 'off',
     'prettier/prettier': [
       'error',
       {
-        useTabs: false,
-        singleQuote: true,
-        quoteProps: 'consistent',
-        printWidth: 100,
+        quoteProps: 'as-needed', //필요한 경우에만 객체 속성에 따옴표
       },
     ],
-    'react/jsx-props-no-spreading': 'off',
   },
 };
