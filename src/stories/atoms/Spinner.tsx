@@ -38,7 +38,7 @@ export const Spinner = ({ size, palette = 'current', ...props }: SpinnerProps) =
     lg: css({
       width: '2.5rem',
       height: '2.5rem',
-      borderWidth: '.25rem',
+      borderWidth: '0.25rem',
     }),
   };
   const paletteStyles = {
