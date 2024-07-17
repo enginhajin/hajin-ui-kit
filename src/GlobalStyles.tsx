@@ -1,6 +1,6 @@
 import { Global, css } from '@emotion/react';
 
-const GlobalStyle = () => (
+const GlobalStyles = () => (
   <Global
     styles={css`
       *,
@@ -83,6 +83,8 @@ const GlobalStyle = () => (
       }
       :where(button, input, select) {
         margin: 0;
+        border: 0;
+        outline: 0;
       }
       :where(button, [type='button' i], [type='reset' i], [type='submit' i]) {
         -webkit-appearance: button;
@@ -153,4 +155,4 @@ const GlobalStyle = () => (
   ></Global>
 );
 
-export default GlobalStyle;
+export default GlobalStyles;

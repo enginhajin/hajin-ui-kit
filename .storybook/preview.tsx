@@ -1,13 +1,13 @@
 import React from 'react';
-import GlobalStyle from '../src/GlobalStyle';
 import type { Preview } from '@storybook/react';
 import { ThemeProvider } from '@emotion/react';
 import theme from '../src/theme';
+import GlobalStyles from '../src/GlobalStyles';
 
 export const decorators = [
   (Story) => (
     <ThemeProvider theme={theme}>
-      <GlobalStyle />
+      <GlobalStyles />
       <Story />
     </ThemeProvider>
   ),
