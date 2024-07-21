@@ -50,7 +50,7 @@ export const Input = ({
     marginBottom: '0.5rem',
     fontSize: `${theme.text.size.md}`,
     fontWeight: 700,
-    color: `${theme.palette.content.primary}`,
+    color: `${theme.palette.content.secondary}`,
   });
   const inputWrapperStyles = css({
     position: 'relative',
@@ -69,7 +69,7 @@ export const Input = ({
     borderStyle: 'solid',
     borderColor: `${theme.palette.default[300]}`,
     fontSize: `${theme.text.size.md}`,
-    color: `${theme.palette.content.secondary}`,
+    color: `${theme.palette.content.primary}`,
     background: 'transparent',
     transition: 'color 0.2s, border-color 0.2s',
     '&::placeholder': {
