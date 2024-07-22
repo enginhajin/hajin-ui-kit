@@ -1,10 +1,9 @@
-import { css, Interpolation, keyframes, Palette, Theme, useTheme } from '@emotion/react';
+import { css, keyframes, Palette, useTheme } from '@emotion/react';
 
 export type SpinnerSize = 'sm' | 'md' | 'lg';
 export interface SpinnerProps {
   size: SpinnerSize;
   palette: Palette | 'current';
-  css?: Interpolation<Theme>;
 }
 
 export const Spinner = ({ size, palette = 'current', ...props }: SpinnerProps) => {

@@ -3,7 +3,7 @@ import { Spinner } from './Spinner';
 
 export type ButtonSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 export type ButtonVariant = 'solid' | 'shadow' | 'outline' | 'ghost' | 'text';
-export interface ButtonProps {
+export interface ButtonProps extends ComponentProps<'button'> {
   size: ButtonSize;
   variant: ButtonVariant;
   palette: Palette;

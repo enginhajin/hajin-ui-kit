@@ -4,20 +4,20 @@ import { RiCheckLine } from 'react-icons/ri';
 
 export interface CheckboxProps extends ComponentProps<'input'> {
   palette: Palette;
+  children: string | React.ReactNode;
   checked: boolean;
-  disabled: boolean;
+  disabled?: boolean;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   customIcon?: React.ReactNode;
-  children: string | React.ReactNode;
 }
 
 export const Checkbox = ({
   palette,
   checked,
+  children,
   disabled,
   onChange,
   customIcon,
-  children,
   ...props
 }: CheckboxProps) => {
   const theme = useTheme();
@@ -32,7 +32,7 @@ export const Checkbox = ({
   });
   const checkboxStyles = css({
     flexShrink: 0,
-    display: 'flex',
+    display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
     width: '1.25rem',

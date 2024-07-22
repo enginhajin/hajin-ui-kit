@@ -1,15 +1,13 @@
-import { css, useTheme } from '@emotion/react';
-import { useState } from 'react';
+import { css, Interpolation, Theme, useTheme } from '@emotion/react';
+import { ComponentProps, useState } from 'react';
 
 export type InputVariant = 'outline' | 'underline';
 export type InputState = 'default' | 'error' | 'success';
 export type InputType = 'text' | 'number' | 'password' | 'email';
-export interface InputProps {
+export interface InputProps extends ComponentProps<'input'> {
   type: InputType;
-  name: string;
-  id?: string;
   label?: string;
-  placeholder?: string;
+  id?: string;
   value?: string | number;
   disabled?: boolean;
   variant: InputVariant;
@@ -17,14 +15,13 @@ export interface InputProps {
   description?: string;
   startContent?: React.ReactNode;
   endContent?: React.ReactNode;
+  styles?: Interpolation<Theme>;
 }
 
 export const Input = ({
   type,
-  name,
-  id,
   label,
-  placeholder,
+  id,
   value: propValue,
   disabled,
   variant,
@@ -32,6 +29,7 @@ export const Input = ({
   description,
   startContent,
   endContent,
+  styles,
   ...props
 }: InputProps) => {
   const [value, setValue] = useState(propValue || '');
@@ -157,7 +155,7 @@ export const Input = ({
   const endContentStyles = css({ right: variant == 'underline' ? '0.75rem' : '1rem' });
 
   return (
-    <div css={[containerStyles, stateStyles[state], disabled && disabledStyles]} {...props}>
+    <div css={[containerStyles, stateStyles[state], disabled && disabledStyles, styles]}>
       {label && (
         <label htmlFor={id} css={labelStyles}>
           {label}
@@ -168,12 +166,11 @@ export const Input = ({
         <input
           type={type}
           id={id}
-          name={name}
           value={value}
-          placeholder={placeholder}
           disabled={disabled}
           css={inputStyles}
           onChange={handleChange}
+          {...props}
         />
         {endContent && <span css={endContentStyles}>{endContent}</span>}
       </div>
