@@ -26,6 +26,9 @@ const meta = {
       control: { type: 'select' },
       options: ['text', 'number', 'password', 'email'],
     },
+    placeholder: {
+      control: { type: 'text' },
+    },
   },
   tags: ['autodocs'],
 } as Meta;
@@ -41,10 +44,8 @@ export const Default: Story = (args: InputProps) => (
 );
 Default.args = {
   type: 'text',
-  name: 'text',
   label: 'Label',
   placeholder: 'Placeholder',
-  value: '',
   state: 'default',
   variant: 'outline',
   description: 'Discription',
@@ -58,10 +59,8 @@ export const Variants: Story = (args: InputProps) => (
 );
 Variants.args = {
   type: 'text',
-  name: '',
   label: 'Label',
   placeholder: 'Placeholder',
-  value: '',
   state: 'default',
   description: 'Discription',
 };
@@ -75,10 +74,8 @@ export const States: Story = (args: InputProps) => (
 );
 States.args = {
   type: 'text',
-  name: '',
   label: 'Label',
   placeholder: 'Placeholder',
-  value: '',
   variant: 'outline',
   description: 'Discription',
 };
@@ -97,10 +94,8 @@ export const WithIcons: Story = (args: InputProps) => (
 );
 WithIcons.args = {
   type: 'text',
-  name: '',
   label: 'Label',
   placeholder: 'Placeholder',
-  value: '',
   description: 'Discription',
 };
 
@@ -132,10 +127,8 @@ export const WithIconsPassword: Story = (args: InputProps) => {
   );
 };
 WithIconsPassword.args = {
-  name: 'password',
   label: 'Password',
   placeholder: 'Enter your Password',
-  value: '',
   state: 'default',
   variant: 'outline',
   description: 'Discription',
@@ -161,9 +154,7 @@ export const Types: Story = (args: InputProps) => (
   </div>
 );
 Types.args = {
-  name: '',
   label: 'Label',
-  value: '',
   state: 'default',
   variant: 'outline',
   description: 'Discription',

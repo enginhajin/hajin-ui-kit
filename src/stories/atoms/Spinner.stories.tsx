@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Spinner } from './Spinner';
+import { Spinner, SpinnerProps } from './Spinner';
 
 const meta = {
   title: 'Atoms/Spinner',
@@ -25,41 +25,31 @@ export const Default: Story = {
   },
 };
 
-export const Sizes = () => {
+export const Sizes: Story = (args: SpinnerProps) => {
   return (
     <div css={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-      <Spinner size="sm" palette="default" />
-      <Spinner size="md" palette="default" />
-      <Spinner size="lg" palette="default" />
+      <Spinner {...args} size="sm" />
+      <Spinner {...args} size="md" />
+      <Spinner {...args} size="lg" />
     </div>
   );
 };
-
-Sizes.parameters = {
-  docs: {
-    description: {
-      story: `sm | md | lg *(Control unavailable)*`,
-    },
-  },
+Sizes.args = {
+  palette: 'default',
 };
 
-export const Palettes = () => {
+export const Palettes: Story = (args: SpinnerProps) => {
   return (
     <div css={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-      <Spinner size="md" palette="default" />
-      <Spinner size="md" palette="primary" />
-      <Spinner size="md" palette="secondary" />
-      <Spinner size="md" palette="success" />
-      <Spinner size="md" palette="warning" />
-      <Spinner size="md" palette="danger" />
+      <Spinner {...args} palette="default" />
+      <Spinner {...args} palette="primary" />
+      <Spinner {...args} palette="secondary" />
+      <Spinner {...args} palette="success" />
+      <Spinner {...args} palette="warning" />
+      <Spinner {...args} palette="danger" />
     </div>
   );
 };
-
-Palettes.parameters = {
-  docs: {
-    description: {
-      story: `default | primary | secondary | success | warning | danger *(Control unavailable)*`,
-    },
-  },
+Palettes.args = {
+  size: 'md',
 };

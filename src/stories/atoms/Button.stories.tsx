@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from './Button';
-import { fn } from '@storybook/test';
+import { Button, ButtonProps } from './Button';
 import { RiThumbUpLine } from 'react-icons/ri';
 import { RiUserLine } from 'react-icons/ri';
 import { RiHeart3Line } from 'react-icons/ri';
@@ -19,7 +18,6 @@ const meta = {
       options: ['solid', 'shadow', 'outline', 'ghost', 'text'],
     },
   },
-  args: { onClick: fn() },
   tags: ['autodocs'],
 } as Meta;
 
@@ -36,123 +34,112 @@ export const Default: Story = {
   },
 };
 
-export const Sizes = () => {
+export const Sizes: Story = (args: ButtonProps) => {
   return (
     <div css={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-      <Button size="xs" variant="solid" palette="default" children="Button" />
-      <Button size="sm" variant="solid" palette="default" children="Button" />
-      <Button size="md" variant="solid" palette="default" children="Button" />
-      <Button size="lg" variant="solid" palette="default" children="Button" />
-      <Button size="xl" variant="solid" palette="default" children="Button" />
+      <Button {...args} size="xs" />
+      <Button {...args} size="sm" />
+      <Button {...args} size="md" />
+      <Button {...args} size="lg" />
+      <Button {...args} size="xl" />
     </div>
   );
 };
 
-Sizes.parameters = {
-  docs: {
-    description: {
-      story: `xs | sm | md | lg | xl *(Control unavailable)*`,
-    },
-  },
+Sizes.args = {
+  variant: 'solid',
+  palette: 'default',
+  children: 'Button',
 };
 
-export const Variants = () => {
+export const Variants: Story = (args: ButtonProps) => {
   return (
     <>
       <div css={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-        <Button size="md" variant="solid" palette="default" children="Button" />
-        <Button size="md" variant="shadow" palette="default" children="Button" />
-        <Button size="md" variant="outline" palette="default" children="Button" />
-        <Button size="md" variant="ghost" palette="default" children="Button" />
-        <Button size="md" variant="text" palette="default" children="Button" />
+        <Button {...args} variant="solid" palette="default" />
+        <Button {...args} variant="shadow" palette="default" />
+        <Button {...args} variant="outline" palette="default" />
+        <Button {...args} variant="ghost" palette="default" />
+        <Button {...args} variant="text" palette="default" />
       </div>
       <div css={{ display: 'flex', gap: '1rem', marginTop: '1rem', alignItems: 'center' }}>
-        <Button size="md" variant="solid" palette="primary" children="Button" />
-        <Button size="md" variant="shadow" palette="primary" children="Button" />
-        <Button size="md" variant="outline" palette="primary" children="Button" />
-        <Button size="md" variant="ghost" palette="primary" children="Button" />
-        <Button size="md" variant="text" palette="primary" children="Button" />
+        <Button {...args} variant="solid" palette="primary" />
+        <Button {...args} variant="shadow" palette="primary" />
+        <Button {...args} variant="outline" palette="primary" />
+        <Button {...args} variant="ghost" palette="primary" />
+        <Button {...args} variant="text" palette="primary" />
       </div>
       <div css={{ display: 'flex', gap: '1rem', marginTop: '1rem', alignItems: 'center' }}>
-        <Button size="md" variant="solid" palette="secondary" children="Button" />
-        <Button size="md" variant="shadow" palette="secondary" children="Button" />
-        <Button size="md" variant="outline" palette="secondary" children="Button" />
-        <Button size="md" variant="ghost" palette="secondary" children="Button" />
-        <Button size="md" variant="text" palette="secondary" children="Button" />
+        <Button {...args} variant="solid" palette="secondary" />
+        <Button {...args} variant="shadow" palette="secondary" />
+        <Button {...args} variant="outline" palette="secondary" />
+        <Button {...args} variant="ghost" palette="secondary" />
+        <Button {...args} variant="text" palette="secondary" />
       </div>
       <div css={{ display: 'flex', gap: '1rem', marginTop: '1rem', alignItems: 'center' }}>
-        <Button size="md" variant="solid" palette="success" children="Button" />
-        <Button size="md" variant="shadow" palette="success" children="Button" />
-        <Button size="md" variant="outline" palette="success" children="Button" />
-        <Button size="md" variant="ghost" palette="success" children="Button" />
-        <Button size="md" variant="text" palette="success" children="Button" />
+        <Button {...args} variant="solid" palette="success" />
+        <Button {...args} variant="shadow" palette="success" />
+        <Button {...args} variant="outline" palette="success" />
+        <Button {...args} variant="ghost" palette="success" />
+        <Button {...args} variant="text" palette="success" />
       </div>
       <div css={{ display: 'flex', gap: '1rem', marginTop: '1rem', alignItems: 'center' }}>
-        <Button size="md" variant="solid" palette="warning" children="Button" />
-        <Button size="md" variant="shadow" palette="warning" children="Button" />
-        <Button size="md" variant="outline" palette="warning" children="Button" />
-        <Button size="md" variant="ghost" palette="warning" children="Button" />
-        <Button size="md" variant="text" palette="warning" children="Button" />
+        <Button {...args} variant="solid" palette="warning" />
+        <Button {...args} variant="shadow" palette="warning" />
+        <Button {...args} variant="outline" palette="warning" />
+        <Button {...args} variant="ghost" palette="warning" />
+        <Button {...args} variant="text" palette="warning" />
       </div>
       <div css={{ display: 'flex', gap: '1rem', marginTop: '1rem', alignItems: 'center' }}>
-        <Button size="md" variant="solid" palette="danger" children="Button" />
-        <Button size="md" variant="shadow" palette="danger" children="Button" />
-        <Button size="md" variant="outline" palette="danger" children="Button" />
-        <Button size="md" variant="ghost" palette="danger" children="Button" />
-        <Button size="md" variant="text" palette="danger" children="Button" />
+        <Button {...args} variant="solid" palette="danger" />
+        <Button {...args} variant="shadow" palette="danger" />
+        <Button {...args} variant="outline" palette="danger" />
+        <Button {...args} variant="ghost" palette="danger" />
+        <Button {...args} variant="text" palette="danger" />
       </div>
     </>
   );
 };
 
-Variants.parameters = {
-  docs: {
-    description: {
-      story: `solid | shadow | outline | ghost | text *(Control unavailable)*`,
-    },
-  },
+Variants.args = {
+  size: 'md',
+  children: 'Button',
 };
 
-export const Palettes = () => {
+export const Palettes: Story = (args: ButtonProps) => {
   return (
     <div css={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-      <Button size="md" variant="solid" palette="default" children="Button" />
-      <Button size="md" variant="solid" palette="primary" children="Button" />
-      <Button size="md" variant="solid" palette="secondary" children="Button" />
-      <Button size="md" variant="solid" palette="success" children="Button" />
-      <Button size="md" variant="solid" palette="warning" children="Button" />
-      <Button size="md" variant="solid" palette="danger" children="Button" />
+      <Button {...args} palette="default" />
+      <Button {...args} palette="primary" />
+      <Button {...args} palette="secondary" />
+      <Button {...args} palette="success" />
+      <Button {...args} palette="warning" />
+      <Button {...args} palette="danger" />
     </div>
   );
 };
 
-Palettes.parameters = {
-  docs: {
-    description: {
-      story: `default | primary | secondary | success | warning | danger *(Control unavailable)*`,
-    },
-  },
+Palettes.args = {
+  size: 'md',
+  variant: 'solid',
+  children: 'Button',
 };
 
-export const WithIcons = () => {
+export const WithIcons: Story = (args: ButtonProps) => {
   return (
     <div css={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-      <Button size="md" variant="solid" palette="primary" endContent={<RiThumbUpLine />}>
+      <Button {...args} variant="solid" palette="primary" endContent={<RiThumbUpLine />}>
         Good
       </Button>
-      <Button size="md" variant="outline" palette="danger" startContent={<RiUserLine />}>
+      <Button {...args} variant="outline" palette="danger" startContent={<RiUserLine />}>
         Delete User
       </Button>
     </div>
   );
 };
 
-WithIcons.parameters = {
-  docs: {
-    description: {
-      story: `endContent | startContent *(Control unavailable)*`,
-    },
-  },
+WithIcons.args = {
+  size: 'md',
 };
 
 export const OnlyIcon: Story = {

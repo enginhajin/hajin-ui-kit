@@ -3,6 +3,7 @@ import type { Preview } from '@storybook/react';
 import { ThemeProvider } from '@emotion/react';
 import theme from '../src/theme';
 import GlobalStyles from '../src/GlobalStyles';
+import { Title, Stories, Controls, ArgTypes, Primary } from '@storybook/blocks';
 
 export const decorators = [
   (Story) => (
@@ -21,6 +22,15 @@ const preview: Preview = {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
+    },
+    docs: {
+      page: () => (
+        <>
+          <Title />
+          <Stories />
+          <ArgTypes />
+        </>
+      ),
     },
   },
 };
