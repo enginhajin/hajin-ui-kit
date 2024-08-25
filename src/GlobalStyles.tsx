@@ -40,7 +40,7 @@ const GlobalStyles = () => (
         color: inherit;
         height: 0;
       }
-      :where(nav) :where(ol, ul) {
+      :where(ol, ul) {
         list-style-type: none;
         padding: 0;
       }
