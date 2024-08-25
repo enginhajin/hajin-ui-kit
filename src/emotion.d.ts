@@ -175,42 +175,36 @@ declare module '@emotion/react' {
         md: string;
         lg: string;
         xl: string;
-        xl2: string;
       };
       primary: {
         sm: string;
         md: string;
         lg: string;
         xl: string;
-        xl2: string;
       };
       secondary: {
         sm: string;
         md: string;
         lg: string;
         xl: string;
-        xl2: string;
       };
       success: {
         sm: string;
         md: string;
         lg: string;
         xl: string;
-        xl2: string;
       };
       warning: {
         sm: string;
         md: string;
         lg: string;
         xl: string;
-        xl2: string;
       };
       danger: {
         sm: string;
         md: string;
         lg: string;
         xl: string;
-        xl2: string;
       };
     };
     radius: {

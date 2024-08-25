@@ -1,7 +1,8 @@
 import { css, keyframes, Palette, useTheme } from '@emotion/react';
+import { ComponentProps } from 'react';
 
 export type SpinnerSize = 'sm' | 'md' | 'lg';
-export interface SpinnerProps {
+export interface SpinnerProps extends ComponentProps<'div'> {
   size: SpinnerSize;
   palette: Palette | 'current';
 }

@@ -1,5 +1,6 @@
 import { css, Palette, useTheme } from '@emotion/react';
 import { Spinner } from './Spinner';
+import { ComponentProps } from 'react';
 
 export type ButtonSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 export type ButtonVariant = 'solid' | 'shadow' | 'outline' | 'ghost' | 'text';
