@@ -9,4 +9,4 @@ export const breakPoints = {
 };
 
 export const mq = (bp: keyof typeof breakPoints) =>
-  `@media screen (min-width: ${breakPoints[bp]}px)`;
+  `@media screen and (min-width: ${breakPoints[bp]}px)`;
