@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   root: true,
   env: { browser: true, es2020: true },
   extends: [
@@ -10,7 +10,7 @@ module.exports = {
     'prettier/prettier',
     'plugin:prettier/recommended',
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  ignorePatterns: ['dist', '.eslintrc.mjs'], // 파일 이름도 변경
   parser: '@typescript-eslint/parser',
   plugins: ['react-refresh'],
   rules: {
@@ -19,7 +19,7 @@ module.exports = {
     'prettier/prettier': [
       'error',
       {
-        quoteProps: 'as-needed', //필요한 경우에만 객체 속성에 따옴표
+        quoteProps: 'as-needed', // 필요한 경우에만 객체 속성에 따옴표
       },
     ],
   },

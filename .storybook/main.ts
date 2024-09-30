@@ -21,9 +21,6 @@ const config: StorybookConfig = {
     // Merge custom configuration into the default config
     return mergeConfig(config, {
       // Add dependencies to pre-optimization
-      optimizeDeps: {
-        include: ['storybook-dark-mode'],
-      },
     });
   },
 };
