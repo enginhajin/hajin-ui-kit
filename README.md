@@ -1,30 +1,28 @@
-# React + TypeScript + Vite
+# 🎨 Hajin UI Kit
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**React UI Component Library**
+- Figma URL : https://www.figma.com/design/z968mHcKZigY88ehb2isCK/UI-Kit
+- Storybook URL : https://66fac05889410d9e30fc6588-gqjgkwzurt.chromatic.com/
+- Notion URL : https://www.notion.so/enginhajin/Hajin-UI-Kit-11146c3f3b988027aaffc4b573c43c24?pvs=4
 
-Currently, two official plugins are available:
+<br/>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 開発期間 ##
+2024.05.24 - 2024.09.30(36日)
 
-## Expanding the ESLint configuration
+<br/>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## コンポーネント ##
+1. [Accordion](https://66fac05889410d9e30fc6588-gqjgkwzurt.chromatic.com/?path=/docs/atoms-accordion--docs)
+2. [Button](https://66fac05889410d9e30fc6588-gqjgkwzurt.chromatic.com/?path=/docs/atoms-button--docs)
+3. [Checkbox](https://66fac05889410d9e30fc6588-gqjgkwzurt.chromatic.com/?path=/docs/atoms-checkbox--docs)
+4. [Input](https://66fac05889410d9e30fc6588-gqjgkwzurt.chromatic.com/?path=/docs/atoms-input--docs)
+5. [Modal](https://66fac05889410d9e30fc6588-gqjgkwzurt.chromatic.com/?path=/docs/atoms-modal--docs)
+6. [RadioGroup](https://66fac05889410d9e30fc6588-gqjgkwzurt.chromatic.com/?path=/docs/atoms-radiogroup--docs)
+7. [Spinner](https://66fac05889410d9e30fc6588-gqjgkwzurt.chromatic.com/?path=/docs/atoms-spinner--docs)
+8. [Switch](https://66fac05889410d9e30fc6588-gqjgkwzurt.chromatic.com/?path=/docs/atoms-switch--docs)
 
-- Configure the top-level `parserOptions` property like this:
+<br/>
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## 技術スタック ##
+Figma, Typescript, React, Yarn, Vite, Emotion, ESLint, Prettier, Storybook, Chromatic, Git
